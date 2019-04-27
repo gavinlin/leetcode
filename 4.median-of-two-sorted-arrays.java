@@ -16,14 +16,12 @@ class Solution {
         int imin = 0;
         int imax = m;
         int halfL = (n + m + 1) / 2;
-        // if (B[j-1] > A[i]) set imin = i+1
-        // if (A[i-1] > B[j]) set imax = i-1
         while(imin <= imax) {
             int i = (imax + imin) / 2;
-            int j = hallfL - i;
-            if (b[j - 1] > a[i]) {
+            int j = halfL - i;
+            if (i < imax && b[j - 1] > a[i]) {
                 imin = i + 1;
-            } else if (a[i - 1] > B[j]) {
+            } else if (i > imin && a[i - 1] > b[j]) {
                 imax = i - 1;
             } else {
                 int leftMax = 0;
