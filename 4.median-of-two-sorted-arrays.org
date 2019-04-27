@@ -1,0 +1,16 @@
+Assume there are two parts of each array left and right
+
+1. len(a_left + b_left) == len(a_right + b_right)
+2. max(a_left + b_left)) <= min(a_right + b_right)
+
+and then median = (max(a_left + b_left) + min(a_right + b_right)) / 2
+
+A from 0 ~ m, left 0 ~ i, right i + 1 ~ m
+B from 0 ~ n
+
+1. set imin = 0, imax = m
+2. set i = (imin + imax) / 2, j = (m + n + 1) / 2 -i
+3. new we have len(left) == len(right)
+- if (B[j-1] <= A[i]) && A[i-1] <= B[j])
+- if (B[j-1] > A[i]) set imin = i+1
+- if (A[i-1] > B[j]) set imax = i-1
