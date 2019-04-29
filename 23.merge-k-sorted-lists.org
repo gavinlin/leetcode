@@ -1,0 +1,10 @@
+** Analytics
+
+let's say there are n arrays. every list's len is l
+
+simple solution is merge than one by one in to a list, time complexity is O(n*l)
+
+a better solution is merge every two list at the first run,
+ and iterating merge two list until they merge into one list,
+ time commplexity is O(l * logn)
+
