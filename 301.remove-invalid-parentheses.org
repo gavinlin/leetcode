@@ -1,0 +1,12 @@
+** Analytics
+
+for example:
+input: ()())()
+outpu: [ ()()(),(())() ]
+
+Remove the minimum number, make int input string valid, all possible results.
+
+Looks like a bfs question. can guarantee minimum delection.
+
+
+
