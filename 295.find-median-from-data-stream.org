@@ -1,0 +1,9 @@
+We need to find the median as soon as possible
+
+First attempt was list, the problem is we need O(n) to add nums and O(logn)
+ to find the median.
+
+Better solution is use two heaps. one stores right part and the other stores 
+left part. Get median can reduice to O(1), and add nums are O(logn)
+
+[[https://www.geeksforgeeks.org/priority-queue-class-in-java-2/][Java priority queue]]
